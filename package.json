@@ -1,12 +1,12 @@
 {
   "name": "node-json-converter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library and commandline to convert json to any file formats.",
   "main": "index.js",
   "scripts": {
     "to:csv": "node src/jsonToCsv.js"
   },
-  "keywords": [],
+  "keywords": ["json", "node", "csv", "convert"],
   "author": "",
   "license": "ISC",
   "engines": {

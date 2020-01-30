@@ -1,5 +1,6 @@
 const fs = require('fs')
 const jsonexport = require('jsonexport')
+const convertJsonToCsv = require('./modules/JsonToCsv')
 
 
 const jsonPath = process.env.JSON_PATH || undefined
@@ -10,11 +11,8 @@ if (jsonPath === undefined) {
 
 console.log('==> Start processing...')
 
-const jsonData = JSON.parse(fs.readFileSync(jsonPath));
-
 const savedPath = './result/data.csv'
-
-jsonexport(jsonData, function(err, csv){
+convertJsonToCsv(jsonPath, (csv, err) => {
     if (err) {
         return console.log(err)
     }
@@ -26,4 +24,3 @@ jsonexport(jsonData, function(err, csv){
         console.log(`==> Finished. Your converted CSV file is at ${savedPath}`)
     })
 })
-
