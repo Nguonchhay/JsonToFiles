@@ -1,0 +1,19 @@
+{
+  "name": "node-json-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "to:csv": "node src/jsonToCsv.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">= 12.x",
+    "npm": ">= 6.x"
+  },
+  "dependencies": {
+    "jsonexport": "^2.4.1"
+  }
+}
